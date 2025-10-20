@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math>
 
 int main()
 {
@@ -60,12 +61,15 @@ int main()
         std::cout << "x=" << x << " y=" << y << std::endl;
     }
     */
+   int main()
+{
     double a, b, c, x1, x2, delta;
     std::cout << "Wprowadz a, b, c: " << std::endl;
     std::cin >> a >> b >> c;
-    if (a==0)
+
+    if (a == 0)
     {
-        if (b==0)
+        if (b == 0)
         {
             if (c == 0)
             {
@@ -75,32 +79,33 @@ int main()
             {
                 std::cout << "To rownanie jest sprzeczne" << std::endl;
             }
-        else 
-        {
-            x1=x2;
-            x1=-b/c;
-                std::cout << "x1, x2= " << x1 << std:endl;
         }
+        else
+        {
+            x1 = -c / b;
+            std::cout << "Rozwiazanie liniowe: x = " << x1 << std::endl;
+        }
+    }
     else
     {
-        delta=b*b-4*a*c;
+        delta = b * b - 4 * a * c;
 
-        if (delta>0)
-            {
-                x1=(-b+sqrt(delta)) / (2*a);
-                x2=(-b-sqrt(delta)) / (2*a);
-                std::cout << "x1= " << x1 << "x2= " << x2 << std::endl;
-            }
-        else if (delta==0)
-            {
-                x1=x2;
-                x1= -b / (2*a);
-                std::cout << "x1, x2= " << x1 << std::endl;
-            }
+        if (delta > 0)
+        {
+            x1 = (-b + sqrt(delta)) / (2 * a);
+            x2 = (-b - sqrt(delta)) / (2 * a);
+            std::cout << "x1 = " << x1 << ", x2 = " << x2 << std::endl;
+        }
+        else if (delta == 0)
+        {
+            x1 = -b / (2 * a);
+            std::cout << "x1 = x2 = " << x1 << std::endl;
+        }
         else
-            {
-                std::cout << "Brak rozwiazan rzeczywistych" << std::endl;
-            }
+        {
+            std::cout << "Brak rozwiazan rzeczywistych" << std::endl;
+        }
+    }
+
+    return 0;
 }
-
-
