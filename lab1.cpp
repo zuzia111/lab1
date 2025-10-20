@@ -61,8 +61,6 @@ int main()
         std::cout << "x=" << x << " y=" << y << std::endl;
     }
     */
-   int main()
-{
     double a, b, c, x1, x2, delta;
     std::cout << "Wprowadz a, b, c: " << std::endl;
     std::cin >> a >> b >> c;
@@ -109,3 +107,4 @@ int main()
 
     return 0;
 }
+
