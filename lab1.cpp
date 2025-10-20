@@ -15,9 +15,9 @@ int main()
     std::cout << suma << std::endl; */
     // zadanie 3
     /* double a, b, x;
-    std::cout << "Wartoœæ a: " << std::endl;
+    std::cout << "WartoÅ“Ã¦ a: " << std::endl;
     std::cin >> a;
-    std::cout << "Wartoœæ b: " << std::endl;
+    std::cout << "WartoÅ“Ã¦ b: " << std::endl;
     std::cin >> b;
     if (a == 0)
     {
@@ -75,14 +75,32 @@ int main()
             {
                 std::cout << "To rownanie jest sprzeczne" << std::endl;
             }
+        else 
+        {
+            x1=x2;
+            x1=-b/c;
+                std::cout << "x1, x2= " << x1 << std:endl;
+        }
+    else
+    {
+        delta=b*b-4*a*c;
 
-
-
-
-    
-
-
-
-
+        if (delta>0)
+            {
+                x1=(-b+sqrt(delta)) / (2*a);
+                x2=(-b-sqrt(delta)) / (2*a);
+                std::cout << "x1= " << x1 << "x2= " << x2 << std::endl;
+            }
+        else if (delta==0)
+            {
+                x1=x2;
+                x1= -b / (2*a);
+                std::cout << "x1, x2= " << x1 << std::endl;
+            }
+        else
+            {
+                std::cout << "Brak rozwiazan rzeczywistych" << std::endl;
+            }
 }
+
 
